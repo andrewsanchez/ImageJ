@@ -5,14 +5,20 @@ for (k = 0; k<list.length; k++) {
 	showProgress(k+1, list.length); 
 	open(dir1+list[k]);
 
-run("Duplicate...", "title=line1");
-run("Duplicate...", "title=line2");
-run("Duplicate...", "title=line3");
-run("Duplicate...", "title=line4");
+rename(File.nameWithoutExtension+"_line1");
 
-selectWindow("stack");
+run("Duplicate...", "title=");
+rename(File.nameWithoutExtension+"_line2");
+
+run("Duplicate...", "title=");
+rename(File.nameWithoutExtension+"_line3");
+
+run("Duplicate...", "title=");
+rename(File.nameWithoutExtension+"_line4");
+
+selectWindow(File.nameWithoutExtension+"_line1");
 run("RGB Stack");
-selectWindow("stack");
+selectWindow(File.nameWithoutExtension+"_line1");
 
 run("Z Project...", "projection=[Sum Slices]");
 run("Find Edges");
@@ -27,7 +33,7 @@ makeLine((w/1.35), (h/2), (w/1.5), (h/2), 20);
 	Array.sort(maxLocs);
 	print("\nMaxima:");
 	for (jj= 0; jj < maxLocs.length; jj++){
-		setResult("filename", jj, File.nameWithoutExtension);
+		setResult("filename", jj, File.nameWithoutExtension+"_line1");
 		setResult("xmax", jj, maxLocs[jj]);
 		if (jj>0) setResult("delta_xmax", jj, (maxLocs[jj]-maxLocs[jj-1]));
 		x= maxLocs[jj];
@@ -43,7 +49,7 @@ makeLine((w/1.35), (h/2), (w/1.5), (h/2), 20);
 	string = String.paste; 
 	File.append(string, "/home/truthling/Documents/Elance ImageJ/camera 2/"+"results.csv");
 
-selectWindow("SUM_stack");
+selectWindow("SUM_"+File.nameWithoutExtension+"_line1");
 w=getWidth();
 h=getHeight();
 makeLine((w/1.35), (h/1.75), (w/1.5), (h/1.75), 20);
@@ -55,7 +61,7 @@ makeLine((w/1.35), (h/1.75), (w/1.5), (h/1.75), 20);
 	Array.sort(maxLocs);
 	print("\nMaxima:");
 	for (jj= 0; jj < maxLocs.length; jj++){
-		setResult("filename", jj, File.nameWithoutExtension);
+		setResult("filename", jj, File.nameWithoutExtension+"_line1");
 		setResult("xmax", jj, maxLocs[jj]);
 		if (jj>0) setResult("delta_xmax", jj, (maxLocs[jj]-maxLocs[jj-1]));
 		x= maxLocs[jj];
@@ -71,9 +77,9 @@ makeLine((w/1.35), (h/1.75), (w/1.5), (h/1.75), 20);
 	string = String.paste; 
 	File.append(string, "/home/truthling/Documents/Elance ImageJ/camera 2/"+"results.csv");
 
-selectWindow("SUM_stack"); 
+selectWindow("SUM_"+File.nameWithoutExtension+"_line1");
 close();
-selectWindow("stack"); 
+selectWindow(File.nameWithoutExtension+"_line1");
 close();
 
 // Color Thresholder 1.49v
