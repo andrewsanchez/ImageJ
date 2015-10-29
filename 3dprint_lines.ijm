@@ -5,18 +5,6 @@ for (k = 0; k<list.length; k++) {
 	showProgress(k+1, list.length); 
 	open(dir1+list[k]);
 
-run("Duplicate...", "title=");
-rename(File.nameWithoutExtension+"_line1");
-
-run("Duplicate...", "title=");
-rename(File.nameWithoutExtension+"_line2");
-
-run("Duplicate...", "title=");
-rename(File.nameWithoutExtension+"_line3");
-
-run("Duplicate...", "title=");
-rename(File.nameWithoutExtension+"_line4");
-
 // Line 1 - Measurement 1
 selectWindow(File.nameWithoutExtension+"_line1");
 run("RGB Stack");
@@ -26,14 +14,14 @@ run("Z Project...", "projection=[Sum Slices]");
 run("Find Edges");
 w=getWidth();
 h=getHeight();
-makeLine((w/1.35), (h/12), (w/1.5), (h/12), 20);
+makeLine((w/1.7), (h/2), (w/1.7), (h/2.5), 20);
 
 	close("Detecting*");
   	tolerance=200;
 	profile =getProfile;
 	maxLocs= Array.findMaxima(profile, tolerance);
 	Array.sort(maxLocs);
-	print("\nMaxima:");
+	print("Maxima:");
 	for (jj= 0; jj < maxLocs.length; jj++){
 		setResult("filename", jj, File.nameWithoutExtension+"_line1");
 		setResult("xmax", jj, maxLocs[jj]);
@@ -49,20 +37,25 @@ makeLine((w/1.35), (h/12), (w/1.5), (h/12), 20);
 	selectWindow("Results");
 	String.copyResults; 
 	string = String.paste; 
-	File.append(string, "/home/truthling/Documents/Elance ImageJ/camera 2/"+"results.csv");
+	File.append(string, "/home/truthling/Documents/3D_Printer/"+"results.csv");
 
 // Line 1 - Measurement 2
-selectWindow("SUM_"+File.nameWithoutExtension+"_line1");
+selectWindow(File.nameWithoutExtension+"_line1");
+run("RGB Stack");
+selectWindow(File.nameWithoutExtension+"_line1");
+
+run("Z Project...", "projection=[Sum Slices]");
+run("Find Edges");
 w=getWidth();
 h=getHeight();
-makeLine((w/1.35), (h/6), (w/1.5), (h/6), 20);
+makeLine((w/1.65), (h/2), (w/1.65), (h/2.5), 20);
 
 	close("Detecting*");
   	tolerance=200;
 	profile =getProfile;
 	maxLocs= Array.findMaxima(profile, tolerance);
 	Array.sort(maxLocs);
-	print("\nMaxima:");
+	print("Maxima:");
 	for (jj= 0; jj < maxLocs.length; jj++){
 		setResult("filename", jj, File.nameWithoutExtension+"_line1");
 		setResult("xmax", jj, maxLocs[jj]);
@@ -78,20 +71,21 @@ makeLine((w/1.35), (h/6), (w/1.5), (h/6), 20);
 	selectWindow("Results");
 	String.copyResults; 
 	string = String.paste; 
-	File.append(string, "/home/truthling/Documents/Elance ImageJ/camera 2/"+"results.csv");
+	File.append(string, "/home/truthling/Documents/3D_Printer/"+"results.csv");
+
 
 // Line 1 - Measurement 3
 selectWindow("SUM_"+File.nameWithoutExtension+"_line1");
 w=getWidth();
 h=getHeight();
-makeLine((w/1.35), (h/3), (w/1.5), (h/3), 20);
+makeLine((w/1.6), (h/2), (w/1.6), (h/2.5), 20);
 
 	close("Detecting*");
   	tolerance=200;
 	profile =getProfile;
 	maxLocs= Array.findMaxima(profile, tolerance);
 	Array.sort(maxLocs);
-	print("\nMaxima:");
+	print("Maxima:");
 	for (jj= 0; jj < maxLocs.length; jj++){
 		setResult("filename", jj, File.nameWithoutExtension+"_line1");
 		setResult("xmax", jj, maxLocs[jj]);
@@ -107,20 +101,20 @@ makeLine((w/1.35), (h/3), (w/1.5), (h/3), 20);
 	selectWindow("Results");
 	String.copyResults; 
 	string = String.paste; 
-	File.append(string, "/home/truthling/Documents/Elance ImageJ/camera 2/"+"results.csv");
+	File.append(string, "/home/truthling/Documents/3D_Printer/"+"results.csv");
 
 // Line 1 - Measurement 4
 selectWindow("SUM_"+File.nameWithoutExtension+"_line1");
 w=getWidth();
 h=getHeight();
-makeLine((w/1.35), (h/2), (w/1.5), (h/2), 20);
+makeLine((w/1.55), (h/2), (w/1.55), (h/2.5), 20);
 
 	close("Detecting*");
   	tolerance=200;
 	profile =getProfile;
 	maxLocs= Array.findMaxima(profile, tolerance);
 	Array.sort(maxLocs);
-	print("\nMaxima:");
+	print("Maxima:");
 	for (jj= 0; jj < maxLocs.length; jj++){
 		setResult("filename", jj, File.nameWithoutExtension+"_line1");
 		setResult("xmax", jj, maxLocs[jj]);
@@ -136,7 +130,36 @@ makeLine((w/1.35), (h/2), (w/1.5), (h/2), 20);
 	selectWindow("Results");
 	String.copyResults; 
 	string = String.paste; 
-	File.append(string, "/home/truthling/Documents/Elance ImageJ/camera 2/"+"results.csv");
+	File.append(string, "/home/truthling/Documents/3D_Printer/"+"results.csv");
+
+// Line 1 - Measurement 5
+selectWindow("SUM_"+File.nameWithoutExtension+"_line1");
+w=getWidth();
+h=getHeight();
+makeLine((w/1.5), (h/2), (w/1.5), (h/2.5), 20);
+
+	close("Detecting*");
+  	tolerance=200;
+	profile =getProfile;
+	maxLocs= Array.findMaxima(profile, tolerance);
+	Array.sort(maxLocs);
+	print("Maxima:");
+	for (jj= 0; jj < maxLocs.length; jj++){
+		setResult("filename", jj, File.nameWithoutExtension+"_line1");
+		setResult("xmax", jj, maxLocs[jj]);
+		if (jj>0) setResult("delta_xmax", jj, (maxLocs[jj]-maxLocs[jj-1]));
+		x= maxLocs[jj];
+		y = profile[x];
+		print("x= ", x, " y= ", y);
+		toUnscaled(x, y);
+		makeRectangle(x-4, y-4 + 1, 8, 8);
+		run("Invert");
+	}
+	updateResults();
+	selectWindow("Results");
+	String.copyResults; 
+	string = String.paste; 
+	File.append(string, "/home/truthling/Documents/3D_Printer/"+"results.csv");
 
 selectWindow("SUM_"+File.nameWithoutExtension+"_line1");
 close();
@@ -144,6 +167,297 @@ selectWindow(File.nameWithoutExtension+"_line1");
 close();
 
 selectWindow(list[k]);
+
+// Line 1 - Measurement 6
+selectWindow("SUM_"+File.nameWithoutExtension+"_line1");
+w=getWidth();
+h=getHeight();
+makeLine((w/1.45), (h/2), (w/1.45), (h/2.5), 20);
+
+	close("Detecting*");
+  	tolerance=200;
+	profile =getProfile;
+	maxLocs= Array.findMaxima(profile, tolerance);
+	Array.sort(maxLocs);
+	print("Maxima:");
+	for (jj= 0; jj < maxLocs.length; jj++){
+		setResult("filename", jj, File.nameWithoutExtension+"_line1");
+		setResult("xmax", jj, maxLocs[jj]);
+		if (jj>0) setResult("delta_xmax", jj, (maxLocs[jj]-maxLocs[jj-1]));
+		x= maxLocs[jj];
+		y = profile[x];
+		print("x= ", x, " y= ", y);
+		toUnscaled(x, y);
+		makeRectangle(x-4, y-4 + 1, 8, 8);
+		run("Invert");
+	}
+	updateResults();
+	selectWindow("Results");
+	String.copyResults; 
+	string = String.paste; 
+	File.append(string, "/home/truthling/Documents/3D_Printer/"+"results.csv");
+
+// Line 1 - Measurement 7
+selectWindow("SUM_"+File.nameWithoutExtension+"_line1");
+w=getWidth();
+h=getHeight();
+makeLine((w/1.4), (h/2), (w/1.4), (h/2.5), 20);
+
+	close("Detecting*");
+  	tolerance=200;
+	profile =getProfile;
+	maxLocs= Array.findMaxima(profile, tolerance);
+	Array.sort(maxLocs);
+	print("Maxima:");
+	for (jj= 0; jj < maxLocs.length; jj++){
+		setResult("filename", jj, File.nameWithoutExtension+"_line1");
+		setResult("xmax", jj, maxLocs[jj]);
+		if (jj>0) setResult("delta_xmax", jj, (maxLocs[jj]-maxLocs[jj-1]));
+		x= maxLocs[jj];
+		y = profile[x];
+		print("x= ", x, " y= ", y);
+		toUnscaled(x, y);
+		makeRectangle(x-4, y-4 + 1, 8, 8);
+		run("Invert");
+	}
+	updateResults();
+	selectWindow("Results");
+	String.copyResults; 
+	string = String.paste; 
+	File.append(string, "/home/truthling/Documents/3D_Printer/"+"results.csv");
+
+// Line 1 - Measurement 8
+selectWindow("SUM_"+File.nameWithoutExtension+"_line1");
+w=getWidth();
+h=getHeight();
+makeLine((w/1.35), (h/2), (w/1.35), (h/2.5), 20);
+
+	close("Detecting*");
+  	tolerance=200;
+	profile =getProfile;
+	maxLocs= Array.findMaxima(profile, tolerance);
+	Array.sort(maxLocs);
+	print("Maxima:");
+	for (jj= 0; jj < maxLocs.length; jj++){
+		setResult("filename", jj, File.nameWithoutExtension+"_line1");
+		setResult("xmax", jj, maxLocs[jj]);
+		if (jj>0) setResult("delta_xmax", jj, (maxLocs[jj]-maxLocs[jj-1]));
+		x= maxLocs[jj];
+		y = profile[x];
+		print("x= ", x, " y= ", y);
+		toUnscaled(x, y);
+		makeRectangle(x-4, y-4 + 1, 8, 8);
+		run("Invert");
+	}
+	updateResults();
+	selectWindow("Results");
+	String.copyResults; 
+	string = String.paste; 
+	File.append(string, "/home/truthling/Documents/3D_Printer/"+"results.csv");
+
+// Line 1 - Measurement 9
+selectWindow("SUM_"+File.nameWithoutExtension+"_line1");
+w=getWidth();
+h=getHeight();
+makeLine((w/1.325), (h/2), (w/1.325), (h/2.5), 20);
+
+	close("Detecting*");
+  	tolerance=200;
+	profile =getProfile;
+	maxLocs= Array.findMaxima(profile, tolerance);
+	Array.sort(maxLocs);
+	print("Maxima:");
+	for (jj= 0; jj < maxLocs.length; jj++){
+		setResult("filename", jj, File.nameWithoutExtension+"_line1");
+		setResult("xmax", jj, maxLocs[jj]);
+		if (jj>0) setResult("delta_xmax", jj, (maxLocs[jj]-maxLocs[jj-1]));
+		x= maxLocs[jj];
+		y = profile[x];
+		print("x= ", x, " y= ", y);
+		toUnscaled(x, y);
+		makeRectangle(x-4, y-4 + 1, 8, 8);
+		run("Invert");
+	}
+	updateResults();
+	selectWindow("Results");
+	String.copyResults; 
+	string = String.paste; 
+	File.append(string, "/home/truthling/Documents/3D_Printer/"+"results.csv");
+
+// Line 1 - Measurement 10
+selectWindow("SUM_"+File.nameWithoutExtension+"_line1");
+w=getWidth();
+h=getHeight();
+makeLine((w/1.3), (h/2), (w/1.3), (h/2.5), 20);
+
+	close("Detecting*");
+  	tolerance=200;
+	profile =getProfile;
+	maxLocs= Array.findMaxima(profile, tolerance);
+	Array.sort(maxLocs);
+	print("Maxima:");
+	for (jj= 0; jj < maxLocs.length; jj++){
+		setResult("filename", jj, File.nameWithoutExtension+"_line1");
+		setResult("xmax", jj, maxLocs[jj]);
+		if (jj>0) setResult("delta_xmax", jj, (maxLocs[jj]-maxLocs[jj-1]));
+		x= maxLocs[jj];
+		y = profile[x];
+		print("x= ", x, " y= ", y);
+		toUnscaled(x, y);
+		makeRectangle(x-4, y-4 + 1, 8, 8);
+		run("Invert");
+	}
+	updateResults();
+	selectWindow("Results");
+	String.copyResults; 
+	string = String.paste; 
+	File.append(string, "/home/truthling/Documents/3D_Printer/"+"results.csv");
+
+// Line 1 - Measurement 11
+selectWindow("SUM_"+File.nameWithoutExtension+"_line1");
+w=getWidth();
+h=getHeight();
+makeLine((w/1.275), (h/2), (w/1.275), (h/2.5), 20);
+
+	close("Detecting*");
+  	tolerance=200;
+	profile =getProfile;
+	maxLocs= Array.findMaxima(profile, tolerance);
+	Array.sort(maxLocs);
+	print("Maxima:");
+	for (jj= 0; jj < maxLocs.length; jj++){
+		setResult("filename", jj, File.nameWithoutExtension+"_line1");
+		setResult("xmax", jj, maxLocs[jj]);
+		if (jj>0) setResult("delta_xmax", jj, (maxLocs[jj]-maxLocs[jj-1]));
+		x= maxLocs[jj];
+		y = profile[x];
+		print("x= ", x, " y= ", y);
+		toUnscaled(x, y);
+		makeRectangle(x-4, y-4 + 1, 8, 8);
+		run("Invert");
+	}
+	updateResults();
+	selectWindow("Results");
+	String.copyResults; 
+	string = String.paste; 
+	File.append(string, "/home/truthling/Documents/3D_Printer/"+"results.csv");
+
+// Line 1 - Measurement 12
+selectWindow("SUM_"+File.nameWithoutExtension+"_line1");
+w=getWidth();
+h=getHeight();
+makeLine((w/1.25), (h/2), (w/1.25), (h/2.5), 20);
+
+	close("Detecting*");
+  	tolerance=200;
+	profile =getProfile;
+	maxLocs= Array.findMaxima(profile, tolerance);
+	Array.sort(maxLocs);
+	print("Maxima:");
+	for (jj= 0; jj < maxLocs.length; jj++){
+		setResult("filename", jj, File.nameWithoutExtension+"_line1");
+		setResult("xmax", jj, maxLocs[jj]);
+		if (jj>0) setResult("delta_xmax", jj, (maxLocs[jj]-maxLocs[jj-1]));
+		x= maxLocs[jj];
+		y = profile[x];
+		print("x= ", x, " y= ", y);
+		toUnscaled(x, y);
+		makeRectangle(x-4, y-4 + 1, 8, 8);
+		run("Invert");
+	}
+	updateResults();
+	selectWindow("Results");
+	String.copyResults; 
+	string = String.paste; 
+	File.append(string, "/home/truthling/Documents/3D_Printer/"+"results.csv");
+
+// Line 1 - Measurement 13
+selectWindow("SUM_"+File.nameWithoutExtension+"_line1");
+w=getWidth();
+h=getHeight();
+makeLine((w/1.225), (h/2), (w/1.225), (h/2.5), 20);
+
+	close("Detecting*");
+  	tolerance=200;
+	profile =getProfile;
+	maxLocs= Array.findMaxima(profile, tolerance);
+	Array.sort(maxLocs);
+	print("Maxima:");
+	for (jj= 0; jj < maxLocs.length; jj++){
+		setResult("filename", jj, File.nameWithoutExtension+"_line1");
+		setResult("xmax", jj, maxLocs[jj]);
+		if (jj>0) setResult("delta_xmax", jj, (maxLocs[jj]-maxLocs[jj-1]));
+		x= maxLocs[jj];
+		y = profile[x];
+		print("x= ", x, " y= ", y);
+		toUnscaled(x, y);
+		makeRectangle(x-4, y-4 + 1, 8, 8);
+		run("Invert");
+	}
+	updateResults();
+	selectWindow("Results");
+	String.copyResults; 
+	string = String.paste; 
+	File.append(string, "/home/truthling/Documents/3D_Printer/"+"results.csv");
+
+// Line 1 - Measurement 14
+selectWindow("SUM_"+File.nameWithoutExtension+"_line1");
+w=getWidth();
+h=getHeight();
+makeLine((w/1.2), (h/2), (w/1.2), (h/2.5), 20);
+
+	close("Detecting*");
+  	tolerance=200;
+	profile =getProfile;
+	maxLocs= Array.findMaxima(profile, tolerance);
+	Array.sort(maxLocs);
+	print("Maxima:");
+	for (jj= 0; jj < maxLocs.length; jj++){
+		setResult("filename", jj, File.nameWithoutExtension+"_line1");
+		setResult("xmax", jj, maxLocs[jj]);
+		if (jj>0) setResult("delta_xmax", jj, (maxLocs[jj]-maxLocs[jj-1]));
+		x= maxLocs[jj];
+		y = profile[x];
+		print("x= ", x, " y= ", y);
+		toUnscaled(x, y);
+		makeRectangle(x-4, y-4 + 1, 8, 8);
+		run("Invert");
+	}
+	updateResults();
+	selectWindow("Results");
+	String.copyResults; 
+	string = String.paste; 
+	File.append(string, "/home/truthling/Documents/3D_Printer/"+"results.csv");
+
+// Line 1 - Measurement 15
+selectWindow("SUM_"+File.nameWithoutExtension+"_line1");
+w=getWidth();
+h=getHeight();
+makeLine((w/1.18), (h/2), (w/1.18), (h/2.5), 20);
+
+	close("Detecting*");
+  	tolerance=200;
+	profile =getProfile;
+	maxLocs= Array.findMaxima(profile, tolerance);
+	Array.sort(maxLocs);
+	print("Maxima:");
+	for (jj= 0; jj < maxLocs.length; jj++){
+		setResult("filename", jj, File.nameWithoutExtension+"_line1");
+		setResult("xmax", jj, maxLocs[jj]);
+		if (jj>0) setResult("delta_xmax", jj, (maxLocs[jj]-maxLocs[jj-1]));
+		x= maxLocs[jj];
+		y = profile[x];
+		print("x= ", x, " y= ", y);
+		toUnscaled(x, y);
+		makeRectangle(x-4, y-4 + 1, 8, 8);
+		run("Invert");
+	}
+	updateResults();
+	selectWindow("Results");
+	String.copyResults; 
+	string = String.paste; 
+	File.append(string, "/home/truthling/Documents/3D_Printer/"+"results.csv");
+
 
 // Color Thresholder 1.49v
 // Autogenerated macro, single images only!
@@ -194,6 +508,8 @@ close();
 	selectWindow("Results");
 	String.copyResults; 
 	string = String.paste; 
-	File.append(string, "/home/truthling/Documents/Elance ImageJ/camera 2/"+"results.csv");
+	File.append(string, "/home/truthling/Documents/3D_Printer/"+"results.csv");
+
+run("Close");
 
 }
