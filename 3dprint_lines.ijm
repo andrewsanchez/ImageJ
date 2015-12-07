@@ -1,6 +1,5 @@
-dir1 = getDirectory("Choose Source Directory "); 
-list = getFileList(dir1); 
-//setBatchMode(true); 
+dir1 = "/home/truthling/Documents/3D_Printer/test/"; 
+list = getFileList(dir1);
 for (k = 0; k<list.length; k++) { 
 	showProgress(k+1, list.length); 
 	open(dir1+list[k]);
@@ -9,7 +8,7 @@ run("Remove Outliers...", "radius=2 threshold=25 which=Bright");
 run("RGB Stack");
 run("Z Project...", "projection=[Sum Slices]");
 run("Find Edges");
-selectWindow(list[k]); 
+selectWindow(list[k]);
 close(); 
 
 // Measurement 1
@@ -406,7 +405,7 @@ makeLine((w/1.2), (h/2.1), (w/1.2), (h/2.4), 20);
 
 // Measurement 15
 
-w=getWidth();
+w=getWidth();needs to do
 h=getHeight();
 makeLine((w/1.18), (h/2.1), (w/1.18), (h/2.4), 20);
 
@@ -432,6 +431,6 @@ makeLine((w/1.18), (h/2.1), (w/1.18), (h/2.4), 20);
 	string = String.paste; 
 	File.append(string, "/home/truthling/Documents/3D_Printer/"+"results.csv");
 
+File.delete(dir1+list[k])
 run("Close");
 run("Close");
-}
