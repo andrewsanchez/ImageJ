@@ -15,10 +15,10 @@ close();
 
 w=getWidth();
 h=getHeight();
-makeLine((w/1.7), (h/2.1), (w/1.7), (h/2.4), 20);
+makeLine((w/1.7), (h/2.1), (w/1.7), (h/2.4), 1);
 
 	
-  	tolerance=200;
+  	tolerance=900;
 	profile =getProfile;
 	maxLocs= Array.findMaxima(profile, tolerance);
 	Array.sort(maxLocs);
@@ -39,10 +39,10 @@ makeLine((w/1.7), (h/2.1), (w/1.7), (h/2.4), 20);
 
 w=getWidth();
 h=getHeight();
-makeLine((w/1.65), (h/2.1), (w/1.65), (h/2.4), 20);
+makeLine((w/1.65), (h/2.1), (w/1.65), (h/2.4), 1);
 
 	
-  	tolerance=200;
+  	tolerance=900;
 	profile =getProfile;
 	maxLocs= Array.findMaxima(profile, tolerance);
 	Array.sort(maxLocs);
@@ -63,10 +63,10 @@ makeLine((w/1.65), (h/2.1), (w/1.65), (h/2.4), 20);
 
 w=getWidth();
 h=getHeight();
-makeLine((w/1.6), (h/2.1), (w/1.6), (h/2.4), 20);
+makeLine((w/1.6), (h/2.1), (w/1.6), (h/2.4), 1);
 
 	
-  	tolerance=200;
+  	tolerance=900;
 	profile =getProfile;
 	maxLocs= Array.findMaxima(profile, tolerance);
 	Array.sort(maxLocs);
@@ -87,10 +87,10 @@ makeLine((w/1.6), (h/2.1), (w/1.6), (h/2.4), 20);
 
 w=getWidth();
 h=getHeight();
-makeLine((w/1.55), (h/2.1), (w/1.55), (h/2.4), 20);
+makeLine((w/1.55), (h/2.1), (w/1.55), (h/2.4), 1);
 
 	
-  	tolerance=200;
+  	tolerance=900;
 	profile =getProfile;
 	maxLocs= Array.findMaxima(profile, tolerance);
 	Array.sort(maxLocs);
@@ -112,10 +112,10 @@ makeLine((w/1.55), (h/2.1), (w/1.55), (h/2.4), 20);
 
 w=getWidth();
 h=getHeight();
-makeLine((w/1.5), (h/2.1), (w/1.5), (h/2.4), 20);
+makeLine((w/1.5), (h/2.1), (w/1.5), (h/2.4), 1);
 
 	
-  	tolerance=200;
+  	tolerance=900;
 	profile =getProfile;
 	maxLocs= Array.findMaxima(profile, tolerance);
 	Array.sort(maxLocs);
@@ -137,10 +137,10 @@ makeLine((w/1.5), (h/2.1), (w/1.5), (h/2.4), 20);
 
 w=getWidth();
 h=getHeight();
-makeLine((w/1.45), (h/2.1), (w/1.45), (h/2.4), 20);
+makeLine((w/1.45), (h/2.1), (w/1.45), (h/2.4), 1);
 
 	
-  	tolerance=200;
+  	tolerance=900;
 	profile =getProfile;
 	maxLocs= Array.findMaxima(profile, tolerance);
 	Array.sort(maxLocs);
@@ -161,10 +161,10 @@ makeLine((w/1.45), (h/2.1), (w/1.45), (h/2.4), 20);
 
 w=getWidth();
 h=getHeight();
-makeLine((w/1.4), (h/2.1), (w/1.4), (h/2.4), 20);
+makeLine((w/1.4), (h/2.1), (w/1.4), (h/2.4), 1);
 
 	
-  	tolerance=200;
+  	tolerance=900;
 	profile =getProfile;
 	maxLocs= Array.findMaxima(profile, tolerance);
 	Array.sort(maxLocs);
@@ -185,10 +185,10 @@ makeLine((w/1.4), (h/2.1), (w/1.4), (h/2.4), 20);
 
 w=getWidth();
 h=getHeight();
-makeLine((w/1.35), (h/2.1), (w/1.35), (h/2.4), 20);
+makeLine((w/1.35), (h/2.1), (w/1.35), (h/2.4), 1);
 
 	
-  	tolerance=200;
+  	tolerance=900;
 	profile =getProfile;
 	maxLocs= Array.findMaxima(profile, tolerance);
 	Array.sort(maxLocs);
@@ -209,10 +209,10 @@ makeLine((w/1.35), (h/2.1), (w/1.35), (h/2.4), 20);
 
 w=getWidth();
 h=getHeight();
-makeLine((w/1.325), (h/2.1), (w/1.325), (h/2.4), 20);
+makeLine((w/1.325), (h/2.1), (w/1.325), (h/2.4), 1);
 
 	
-  	tolerance=200;
+  	tolerance=900;
 	profile =getProfile;
 	maxLocs= Array.findMaxima(profile, tolerance);
 	Array.sort(maxLocs);
@@ -233,10 +233,10 @@ makeLine((w/1.325), (h/2.1), (w/1.325), (h/2.4), 20);
 
 w=getWidth();
 h=getHeight();
-makeLine((w/1.3), (h/2.1), (w/1.3), (h/2.4), 20);
+makeLine((w/1.3), (h/2.1), (w/1.3), (h/2.4), 1);
 
 	
-  	tolerance=200;
+  	tolerance=900;
 	profile =getProfile;
 	maxLocs= Array.findMaxima(profile, tolerance);
 	Array.sort(maxLocs);
@@ -257,10 +257,10 @@ makeLine((w/1.3), (h/2.1), (w/1.3), (h/2.4), 20);
 
 w=getWidth();
 h=getHeight();
-makeLine((w/1.275), (h/2.1), (w/1.275), (h/2.4), 20);
+makeLine((w/1.275), (h/2.1), (w/1.275), (h/2.4), 1);
 
 	
-  	tolerance=200;
+  	tolerance=900;
 	profile =getProfile;
 	maxLocs= Array.findMaxima(profile, tolerance);
 	Array.sort(maxLocs);
@@ -281,10 +281,10 @@ makeLine((w/1.275), (h/2.1), (w/1.275), (h/2.4), 20);
 
 w=getWidth();
 h=getHeight();
-makeLine((w/1.25), (h/2.1), (w/1.25), (h/2.4), 20);
+makeLine((w/1.25), (h/2.1), (w/1.25), (h/2.4), 1);
 
 	
-  	tolerance=200;
+  	tolerance=900;
 	profile =getProfile;
 	maxLocs= Array.findMaxima(profile, tolerance);
 	Array.sort(maxLocs);
@@ -305,10 +305,10 @@ makeLine((w/1.25), (h/2.1), (w/1.25), (h/2.4), 20);
 
 w=getWidth();
 h=getHeight();
-makeLine((w/1.225), (h/2.1), (w/1.225), (h/2.4), 20);
+makeLine((w/1.225), (h/2.1), (w/1.225), (h/2.4), 1);
 
 	
-  	tolerance=200;
+  	tolerance=900;
 	profile =getProfile;
 	maxLocs= Array.findMaxima(profile, tolerance);
 	Array.sort(maxLocs);
@@ -329,10 +329,10 @@ makeLine((w/1.225), (h/2.1), (w/1.225), (h/2.4), 20);
 
 w=getWidth();
 h=getHeight();
-makeLine((w/1.2), (h/2.1), (w/1.2), (h/2.4), 20);
+makeLine((w/1.2), (h/2.1), (w/1.2), (h/2.4), 1);
 
 	
-  	tolerance=200;
+  	tolerance=900;
 	profile =getProfile;
 	maxLocs= Array.findMaxima(profile, tolerance);
 	Array.sort(maxLocs);
@@ -353,10 +353,10 @@ makeLine((w/1.2), (h/2.1), (w/1.2), (h/2.4), 20);
 
 w=getWidth();
 h=getHeight();
-makeLine((w/1.18), (h/2.1), (w/1.18), (h/2.4), 20);
+makeLine((w/1.18), (h/2.1), (w/1.18), (h/2.4), 1);
 
 	
-  	tolerance=200;
+  	tolerance=900;
 	profile =getProfile;
 	maxLocs= Array.findMaxima(profile, tolerance);
 	Array.sort(maxLocs);
