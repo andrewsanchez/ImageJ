@@ -4,7 +4,7 @@ for (k = 0; k<list.length; k++) {
 	showProgress(k+1, list.length); 
 	open(dir1+list[k]);
 
-run("Remove Outliers...", "radius=2 threshold=25 which=Bright");
+run("Minimum...", "radius=2");
 run("RGB Stack");
 run("Z Project...", "projection=[Sum Slices]");
 run("Find Edges");
@@ -22,16 +22,12 @@ makeLine((w/1.7), (h/2.1), (w/1.7), (h/2.4), 20);
 	profile =getProfile;
 	maxLocs= Array.findMaxima(profile, tolerance);
 	Array.sort(maxLocs);
+	
 	for (jj= 0; jj < maxLocs.length; jj++){
 		setResult("filename", jj, File.nameWithoutExtension+"_line1");
 		setResult("xmax", jj, maxLocs[jj]);
 		if (jj>0) 
 		setResult("delta_xmax", jj, (maxLocs[jj]-maxLocs[jj-1]));
-		x= maxLocs[jj];
-		y = profile[x];
-		toUnscaled(x, y);
-		makeRectangle(x-4, y-4 + 1, 8, 8);
-		run("Invert");
 	}
 	updateResults();
 	selectWindow("Results");
@@ -50,16 +46,12 @@ makeLine((w/1.65), (h/2.1), (w/1.65), (h/2.4), 20);
 	profile =getProfile;
 	maxLocs= Array.findMaxima(profile, tolerance);
 	Array.sort(maxLocs);
+	
 	for (jj= 0; jj < maxLocs.length; jj++){
 		setResult("filename", jj, File.nameWithoutExtension+"_line1");
 		setResult("xmax", jj, maxLocs[jj]);
 		if (jj>0) 
 		setResult("delta_xmax", jj, (maxLocs[jj]-maxLocs[jj-1]));
-		x= maxLocs[jj];
-		y = profile[x];
-		toUnscaled(x, y);
-		makeRectangle(x-4, y-4 + 1, 8, 8);
-		run("Invert");
 	}
 	updateResults();
 	selectWindow("Results");
@@ -78,16 +70,12 @@ makeLine((w/1.6), (h/2.1), (w/1.6), (h/2.4), 20);
 	profile =getProfile;
 	maxLocs= Array.findMaxima(profile, tolerance);
 	Array.sort(maxLocs);
+	
 	for (jj= 0; jj < maxLocs.length; jj++){
 		setResult("filename", jj, File.nameWithoutExtension+"_line1");
 		setResult("xmax", jj, maxLocs[jj]);
 		if (jj>0) 
 		setResult("delta_xmax", jj, (maxLocs[jj]-maxLocs[jj-1]));
-		x= maxLocs[jj];
-		y = profile[x];
-		toUnscaled(x, y);
-		makeRectangle(x-4, y-4 + 1, 8, 8);
-		run("Invert");
 	}
 	updateResults();
 	selectWindow("Results");
@@ -106,16 +94,13 @@ makeLine((w/1.55), (h/2.1), (w/1.55), (h/2.4), 20);
 	profile =getProfile;
 	maxLocs= Array.findMaxima(profile, tolerance);
 	Array.sort(maxLocs);
+
+	
 	for (jj= 0; jj < maxLocs.length; jj++){
 		setResult("filename", jj, File.nameWithoutExtension+"_line1");
 		setResult("xmax", jj, maxLocs[jj]);
 		if (jj>0) 
 		setResult("delta_xmax", jj, (maxLocs[jj]-maxLocs[jj-1]));
-		x= maxLocs[jj];
-		y = profile[x];
-		toUnscaled(x, y);
-		makeRectangle(x-4, y-4 + 1, 8, 8);
-		run("Invert");
 	}
 	updateResults();
 	selectWindow("Results");
@@ -134,16 +119,13 @@ makeLine((w/1.5), (h/2.1), (w/1.5), (h/2.4), 20);
 	profile =getProfile;
 	maxLocs= Array.findMaxima(profile, tolerance);
 	Array.sort(maxLocs);
+
+	
 	for (jj= 0; jj < maxLocs.length; jj++){
 		setResult("filename", jj, File.nameWithoutExtension+"_line1");
 		setResult("xmax", jj, maxLocs[jj]);
 		if (jj>0) 
 		setResult("delta_xmax", jj, (maxLocs[jj]-maxLocs[jj-1]));
-		x= maxLocs[jj];
-		y = profile[x];
-		toUnscaled(x, y);
-		makeRectangle(x-4, y-4 + 1, 8, 8);
-		run("Invert");
 	}
 	updateResults();
 	selectWindow("Results");
@@ -162,16 +144,12 @@ makeLine((w/1.45), (h/2.1), (w/1.45), (h/2.4), 20);
 	profile =getProfile;
 	maxLocs= Array.findMaxima(profile, tolerance);
 	Array.sort(maxLocs);
+	
 	for (jj= 0; jj < maxLocs.length; jj++){
 		setResult("filename", jj, File.nameWithoutExtension+"_line1");
 		setResult("xmax", jj, maxLocs[jj]);
 		if (jj>0) 
 		setResult("delta_xmax", jj, (maxLocs[jj]-maxLocs[jj-1]));
-		x= maxLocs[jj];
-		y = profile[x];
-		toUnscaled(x, y);
-		makeRectangle(x-4, y-4 + 1, 8, 8);
-		run("Invert");
 	}
 	updateResults();
 	selectWindow("Results");
@@ -190,16 +168,12 @@ makeLine((w/1.4), (h/2.1), (w/1.4), (h/2.4), 20);
 	profile =getProfile;
 	maxLocs= Array.findMaxima(profile, tolerance);
 	Array.sort(maxLocs);
+	
 	for (jj= 0; jj < maxLocs.length; jj++){
 		setResult("filename", jj, File.nameWithoutExtension+"_line1");
 		setResult("xmax", jj, maxLocs[jj]);
 		if (jj>0) 
 		setResult("delta_xmax", jj, (maxLocs[jj]-maxLocs[jj-1]));
-		x= maxLocs[jj];
-		y = profile[x];
-		toUnscaled(x, y);
-		makeRectangle(x-4, y-4 + 1, 8, 8);
-		run("Invert");
 	}
 	updateResults();
 	selectWindow("Results");
@@ -218,16 +192,12 @@ makeLine((w/1.35), (h/2.1), (w/1.35), (h/2.4), 20);
 	profile =getProfile;
 	maxLocs= Array.findMaxima(profile, tolerance);
 	Array.sort(maxLocs);
+	
 	for (jj= 0; jj < maxLocs.length; jj++){
 		setResult("filename", jj, File.nameWithoutExtension+"_line1");
 		setResult("xmax", jj, maxLocs[jj]);
 		if (jj>0) 
 		setResult("delta_xmax", jj, (maxLocs[jj]-maxLocs[jj-1]));
-		x= maxLocs[jj];
-		y = profile[x];
-		toUnscaled(x, y);
-		makeRectangle(x-4, y-4 + 1, 8, 8);
-		run("Invert");
 	}
 	updateResults();
 	selectWindow("Results");
@@ -246,16 +216,12 @@ makeLine((w/1.325), (h/2.1), (w/1.325), (h/2.4), 20);
 	profile =getProfile;
 	maxLocs= Array.findMaxima(profile, tolerance);
 	Array.sort(maxLocs);
+	
 	for (jj= 0; jj < maxLocs.length; jj++){
 		setResult("filename", jj, File.nameWithoutExtension+"_line1");
 		setResult("xmax", jj, maxLocs[jj]);
 		if (jj>0) 
 		setResult("delta_xmax", jj, (maxLocs[jj]-maxLocs[jj-1]));
-		x= maxLocs[jj];
-		y = profile[x];
-		toUnscaled(x, y);
-		makeRectangle(x-4, y-4 + 1, 8, 8);
-		run("Invert");
 	}
 	updateResults();
 	selectWindow("Results");
@@ -274,16 +240,12 @@ makeLine((w/1.3), (h/2.1), (w/1.3), (h/2.4), 20);
 	profile =getProfile;
 	maxLocs= Array.findMaxima(profile, tolerance);
 	Array.sort(maxLocs);
+	
 	for (jj= 0; jj < maxLocs.length; jj++){
 		setResult("filename", jj, File.nameWithoutExtension+"_line1");
 		setResult("xmax", jj, maxLocs[jj]);
 		if (jj>0) 
 		setResult("delta_xmax", jj, (maxLocs[jj]-maxLocs[jj-1]));
-		x= maxLocs[jj];
-		y = profile[x];
-		toUnscaled(x, y);
-		makeRectangle(x-4, y-4 + 1, 8, 8);
-		run("Invert");
 	}
 	updateResults();
 	selectWindow("Results");
@@ -302,16 +264,12 @@ makeLine((w/1.275), (h/2.1), (w/1.275), (h/2.4), 20);
 	profile =getProfile;
 	maxLocs= Array.findMaxima(profile, tolerance);
 	Array.sort(maxLocs);
+	
 	for (jj= 0; jj < maxLocs.length; jj++){
 		setResult("filename", jj, File.nameWithoutExtension+"_line1");
 		setResult("xmax", jj, maxLocs[jj]);
 		if (jj>0) 
 		setResult("delta_xmax", jj, (maxLocs[jj]-maxLocs[jj-1]));
-		x= maxLocs[jj];
-		y = profile[x];
-		toUnscaled(x, y);
-		makeRectangle(x-4, y-4 + 1, 8, 8);
-		run("Invert");
 	}
 	updateResults();
 	selectWindow("Results");
@@ -330,16 +288,12 @@ makeLine((w/1.25), (h/2.1), (w/1.25), (h/2.4), 20);
 	profile =getProfile;
 	maxLocs= Array.findMaxima(profile, tolerance);
 	Array.sort(maxLocs);
+	
 	for (jj= 0; jj < maxLocs.length; jj++){
 		setResult("filename", jj, File.nameWithoutExtension+"_line1");
 		setResult("xmax", jj, maxLocs[jj]);
 		if (jj>0) 
 		setResult("delta_xmax", jj, (maxLocs[jj]-maxLocs[jj-1]));
-		x= maxLocs[jj];
-		y = profile[x];
-		toUnscaled(x, y);
-		makeRectangle(x-4, y-4 + 1, 8, 8);
-		run("Invert");
 	}
 	updateResults();
 	selectWindow("Results");
@@ -358,16 +312,12 @@ makeLine((w/1.225), (h/2.1), (w/1.225), (h/2.4), 20);
 	profile =getProfile;
 	maxLocs= Array.findMaxima(profile, tolerance);
 	Array.sort(maxLocs);
+	
 	for (jj= 0; jj < maxLocs.length; jj++){
 		setResult("filename", jj, File.nameWithoutExtension+"_line1");
 		setResult("xmax", jj, maxLocs[jj]);
 		if (jj>0) 
 		setResult("delta_xmax", jj, (maxLocs[jj]-maxLocs[jj-1]));
-		x= maxLocs[jj];
-		y = profile[x];
-		toUnscaled(x, y);
-		makeRectangle(x-4, y-4 + 1, 8, 8);
-		run("Invert");
 	}
 	updateResults();
 	selectWindow("Results");
@@ -386,16 +336,12 @@ makeLine((w/1.2), (h/2.1), (w/1.2), (h/2.4), 20);
 	profile =getProfile;
 	maxLocs= Array.findMaxima(profile, tolerance);
 	Array.sort(maxLocs);
+	
 	for (jj= 0; jj < maxLocs.length; jj++){
 		setResult("filename", jj, File.nameWithoutExtension+"_line1");
 		setResult("xmax", jj, maxLocs[jj]);
 		if (jj>0) 
 		setResult("delta_xmax", jj, (maxLocs[jj]-maxLocs[jj-1]));
-		x= maxLocs[jj];
-		y = profile[x];
-		toUnscaled(x, y);
-		makeRectangle(x-4, y-4 + 1, 8, 8);
-		run("Invert");
 	}
 	updateResults();
 	selectWindow("Results");
@@ -405,7 +351,7 @@ makeLine((w/1.2), (h/2.1), (w/1.2), (h/2.4), 20);
 
 // Measurement 15
 
-w=getWidth();needs to do
+w=getWidth();
 h=getHeight();
 makeLine((w/1.18), (h/2.1), (w/1.18), (h/2.4), 20);
 
@@ -414,16 +360,12 @@ makeLine((w/1.18), (h/2.1), (w/1.18), (h/2.4), 20);
 	profile =getProfile;
 	maxLocs= Array.findMaxima(profile, tolerance);
 	Array.sort(maxLocs);
+	
 	for (jj= 0; jj < maxLocs.length; jj++){
 		setResult("filename", jj, File.nameWithoutExtension+"_line1");
 		setResult("xmax", jj, maxLocs[jj]);
 		if (jj>0) 
 		setResult("delta_xmax", jj, (maxLocs[jj]-maxLocs[jj-1]));
-		x= maxLocs[jj];
-		y = profile[x];
-		toUnscaled(x, y);
-		makeRectangle(x-4, y-4 + 1, 8, 8);
-		run("Invert");
 	}
 	updateResults();
 	selectWindow("Results");
@@ -431,6 +373,6 @@ makeLine((w/1.18), (h/2.1), (w/1.18), (h/2.4), 20);
 	string = String.paste; 
 	File.append(string, "/home/truthling/Documents/3D_Printer/"+"results.csv");
 
-File.delete(dir1+list[k])
+// File.delete(dir1+list[k])
 run("Close");
-run("Close");
+// run("Close");
