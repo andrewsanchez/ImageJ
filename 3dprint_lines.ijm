@@ -24,7 +24,7 @@ makeLine((w/1.7), (h/2.1), (w/1.7), (h/2.4), 20);
 	Array.sort(maxLocs);
 	
 	for (jj= 0; jj < maxLocs.length; jj++){
-		setResult("filename", jj, File.nameWithoutExtension+"_line1");
+		setResult("filename", jj, File.nameWithoutExtension);
 		setResult("xmax", jj, maxLocs[jj]);
 		if (jj>0) 
 		setResult("delta_xmax", jj, (maxLocs[jj]-maxLocs[jj-1]));
@@ -48,7 +48,7 @@ makeLine((w/1.65), (h/2.1), (w/1.65), (h/2.4), 20);
 	Array.sort(maxLocs);
 	
 	for (jj= 0; jj < maxLocs.length; jj++){
-		setResult("filename", jj, File.nameWithoutExtension+"_line1");
+		setResult("filename", jj, File.nameWithoutExtension);
 		setResult("xmax", jj, maxLocs[jj]);
 		if (jj>0) 
 		setResult("delta_xmax", jj, (maxLocs[jj]-maxLocs[jj-1]));
@@ -72,7 +72,7 @@ makeLine((w/1.6), (h/2.1), (w/1.6), (h/2.4), 20);
 	Array.sort(maxLocs);
 	
 	for (jj= 0; jj < maxLocs.length; jj++){
-		setResult("filename", jj, File.nameWithoutExtension+"_line1");
+		setResult("filename", jj, File.nameWithoutExtension);
 		setResult("xmax", jj, maxLocs[jj]);
 		if (jj>0) 
 		setResult("delta_xmax", jj, (maxLocs[jj]-maxLocs[jj-1]));
@@ -97,7 +97,7 @@ makeLine((w/1.55), (h/2.1), (w/1.55), (h/2.4), 20);
 
 	
 	for (jj= 0; jj < maxLocs.length; jj++){
-		setResult("filename", jj, File.nameWithoutExtension+"_line1");
+		setResult("filename", jj, File.nameWithoutExtension);
 		setResult("xmax", jj, maxLocs[jj]);
 		if (jj>0) 
 		setResult("delta_xmax", jj, (maxLocs[jj]-maxLocs[jj-1]));
@@ -122,7 +122,7 @@ makeLine((w/1.5), (h/2.1), (w/1.5), (h/2.4), 20);
 
 	
 	for (jj= 0; jj < maxLocs.length; jj++){
-		setResult("filename", jj, File.nameWithoutExtension+"_line1");
+		setResult("filename", jj, File.nameWithoutExtension);
 		setResult("xmax", jj, maxLocs[jj]);
 		if (jj>0) 
 		setResult("delta_xmax", jj, (maxLocs[jj]-maxLocs[jj-1]));
@@ -146,7 +146,7 @@ makeLine((w/1.45), (h/2.1), (w/1.45), (h/2.4), 20);
 	Array.sort(maxLocs);
 	
 	for (jj= 0; jj < maxLocs.length; jj++){
-		setResult("filename", jj, File.nameWithoutExtension+"_line1");
+		setResult("filename", jj, File.nameWithoutExtension);
 		setResult("xmax", jj, maxLocs[jj]);
 		if (jj>0) 
 		setResult("delta_xmax", jj, (maxLocs[jj]-maxLocs[jj-1]));
@@ -170,7 +170,7 @@ makeLine((w/1.4), (h/2.1), (w/1.4), (h/2.4), 20);
 	Array.sort(maxLocs);
 	
 	for (jj= 0; jj < maxLocs.length; jj++){
-		setResult("filename", jj, File.nameWithoutExtension+"_line1");
+		setResult("filename", jj, File.nameWithoutExtension);
 		setResult("xmax", jj, maxLocs[jj]);
 		if (jj>0) 
 		setResult("delta_xmax", jj, (maxLocs[jj]-maxLocs[jj-1]));
@@ -194,7 +194,7 @@ makeLine((w/1.35), (h/2.1), (w/1.35), (h/2.4), 20);
 	Array.sort(maxLocs);
 	
 	for (jj= 0; jj < maxLocs.length; jj++){
-		setResult("filename", jj, File.nameWithoutExtension+"_line1");
+		setResult("filename", jj, File.nameWithoutExtension);
 		setResult("xmax", jj, maxLocs[jj]);
 		if (jj>0) 
 		setResult("delta_xmax", jj, (maxLocs[jj]-maxLocs[jj-1]));
@@ -218,7 +218,7 @@ makeLine((w/1.325), (h/2.1), (w/1.325), (h/2.4), 20);
 	Array.sort(maxLocs);
 	
 	for (jj= 0; jj < maxLocs.length; jj++){
-		setResult("filename", jj, File.nameWithoutExtension+"_line1");
+		setResult("filename", jj, File.nameWithoutExtension);
 		setResult("xmax", jj, maxLocs[jj]);
 		if (jj>0) 
 		setResult("delta_xmax", jj, (maxLocs[jj]-maxLocs[jj-1]));
@@ -242,7 +242,7 @@ makeLine((w/1.3), (h/2.1), (w/1.3), (h/2.4), 20);
 	Array.sort(maxLocs);
 	
 	for (jj= 0; jj < maxLocs.length; jj++){
-		setResult("filename", jj, File.nameWithoutExtension+"_line1");
+		setResult("filename", jj, File.nameWithoutExtension);
 		setResult("xmax", jj, maxLocs[jj]);
 		if (jj>0) 
 		setResult("delta_xmax", jj, (maxLocs[jj]-maxLocs[jj-1]));
@@ -266,7 +266,7 @@ makeLine((w/1.275), (h/2.1), (w/1.275), (h/2.4), 20);
 	Array.sort(maxLocs);
 	
 	for (jj= 0; jj < maxLocs.length; jj++){
-		setResult("filename", jj, File.nameWithoutExtension+"_line1");
+		setResult("filename", jj, File.nameWithoutExtension);
 		setResult("xmax", jj, maxLocs[jj]);
 		if (jj>0) 
 		setResult("delta_xmax", jj, (maxLocs[jj]-maxLocs[jj-1]));
@@ -290,7 +290,7 @@ makeLine((w/1.25), (h/2.1), (w/1.25), (h/2.4), 20);
 	Array.sort(maxLocs);
 	
 	for (jj= 0; jj < maxLocs.length; jj++){
-		setResult("filename", jj, File.nameWithoutExtension+"_line1");
+		setResult("filename", jj, File.nameWithoutExtension);
 		setResult("xmax", jj, maxLocs[jj]);
 		if (jj>0) 
 		setResult("delta_xmax", jj, (maxLocs[jj]-maxLocs[jj-1]));
@@ -314,7 +314,7 @@ makeLine((w/1.225), (h/2.1), (w/1.225), (h/2.4), 20);
 	Array.sort(maxLocs);
 	
 	for (jj= 0; jj < maxLocs.length; jj++){
-		setResult("filename", jj, File.nameWithoutExtension+"_line1");
+		setResult("filename", jj, File.nameWithoutExtension);
 		setResult("xmax", jj, maxLocs[jj]);
 		if (jj>0) 
 		setResult("delta_xmax", jj, (maxLocs[jj]-maxLocs[jj-1]));
@@ -338,7 +338,7 @@ makeLine((w/1.2), (h/2.1), (w/1.2), (h/2.4), 20);
 	Array.sort(maxLocs);
 	
 	for (jj= 0; jj < maxLocs.length; jj++){
-		setResult("filename", jj, File.nameWithoutExtension+"_line1");
+		setResult("filename", jj, File.nameWithoutExtension);
 		setResult("xmax", jj, maxLocs[jj]);
 		if (jj>0) 
 		setResult("delta_xmax", jj, (maxLocs[jj]-maxLocs[jj-1]));
@@ -362,7 +362,7 @@ makeLine((w/1.18), (h/2.1), (w/1.18), (h/2.4), 20);
 	Array.sort(maxLocs);
 	
 	for (jj= 0; jj < maxLocs.length; jj++){
-		setResult("filename", jj, File.nameWithoutExtension+"_line1");
+		setResult("filename", jj, File.nameWithoutExtension);
 		setResult("xmax", jj, maxLocs[jj]);
 		if (jj>0) 
 		setResult("delta_xmax", jj, (maxLocs[jj]-maxLocs[jj-1]));
@@ -373,6 +373,6 @@ makeLine((w/1.18), (h/2.1), (w/1.18), (h/2.4), 20);
 	string = String.paste; 
 	File.append(string, "/home/truthling/Documents/3D_Printer/"+"results.csv");
 
-// File.delete(dir1+list[k])
+File.delete(dir1+list[k])
 run("Close");
-// run("Close");
+run("Close");
