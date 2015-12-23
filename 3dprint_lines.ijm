@@ -4,7 +4,7 @@ for (k = 0; k<list.length; k++) {
 	showProgress(k+1, list.length); 
 	open(dir1+list[k]);
 fileName = fileName;
-resultsDirectory = "/home/truthling/Documents/3D_Printer"/;
+resultsDirectory = "/home/truthling/Documents/3D_Printer/";
 
 run("Minimum...", "radius=2");
 run("RGB Stack");
@@ -15,9 +15,13 @@ close();
 
 // Measurement 1
 
+// remove redundant variables w, h, tolerance, profile, etc.
+
 w=getWidth();
 h=getHeight();
-makeLine((w/1.7), (h/2.1), (w/1.7), (h/2.4), 1);
+findEdgeA = (h/2.1);
+findEdgeB = (h/2.4);
+makeLine((w/1.7), findEdgeA, (w/1.7), findEdgeB, 1);
 
 	
   	tolerance=900;
@@ -39,10 +43,7 @@ makeLine((w/1.7), (h/2.1), (w/1.7), (h/2.4), 1);
 
 // Measurement 2
 
-w=getWidth();
-h=getHeight();
 makeLine((w/1.65), (h/2.1), (w/1.65), (h/2.4), 1);
-
 	
   	tolerance=900;
 	profile =getProfile;
