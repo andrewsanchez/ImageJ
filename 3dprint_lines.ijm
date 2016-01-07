@@ -14,12 +14,13 @@ run("Find Edges");
 selectWindow(list[k]);
 close(); 
 
-// Measurement 1
-
 w=getWidth();
 h=getHeight();
+
 findEdgeA = (h/2.1);
 findEdgeB = (h/2.4);
+
+// Measurement 1
 
 makeLine((w/1.7), findEdgeA, (w/1.7), findEdgeB, 20);
 	
