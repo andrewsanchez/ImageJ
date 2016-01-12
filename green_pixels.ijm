@@ -1,4 +1,4 @@
-dir1 = getDirectory("Choose Source Directory "); 
+dir1 = getDirectory("Choose folder containing images you wish to analyze"); 
 list = getFileList(dir1); 
 //setBatchMode(true); 
 for (k = 0; k<list.length; k++) { 
