@@ -8,7 +8,7 @@ for (k = 0; k<list.length; k++) {
 newImagesFolder = "/home/truthling/Documents/ECOSS/Nick_Kainrath/";
 imageName = File.nameWithoutExtension;
 
-setTool("rectangle");
+setTool("polygon");
 
 while(selectionType()<0){ 
 	waitForUser("Click to select points around the plant","Draw the shape and click 'OK'"); 
@@ -68,6 +68,6 @@ run("Analyze Particles...", "size=10-Infinity summarize");
 IJ.renameResults("Summary","Results");
 String.copyResults; 
 string = String.paste; 
-File.append(string, newImagesFolder+"results.csv");
+File.append(string, newImagesFolder+"sage_brush_results.csv");
 
 }
