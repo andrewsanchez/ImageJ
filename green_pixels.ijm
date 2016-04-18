@@ -1,3 +1,9 @@
+// saves summary and results tables
+selectWindow("Summary"); 
+saveAs("text", dir1+"green.txt"); 
+selectWindow("Results"); 
+saveAs("results", dir1+"area.txt"); 
+
 // change the path between quotes on the line below
 // to the directory you want to save your results
 // files named "area.csv" and "green.csv" will be created there
