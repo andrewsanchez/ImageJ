@@ -1,3 +1,8 @@
+// change the path between quotes on the line below
+// to the directory you want to save your results
+// files named "area.csv" and "green.csv" will be created there
+saveResults = "/Users/andrew/Projects/ECOSS/"
+
 dir1 = getDirectory("Choose folder containing images you wish to analyze"); 
 list = getFileList(dir1); 
 //setBatchMode(true); 
@@ -5,15 +10,16 @@ for (k = 0; k<list.length; k++) {
 	showProgress(k+1, list.length); 
 	open(dir1+list[k]);
 
-// crops photo, clears outside of circle, and measures total area
+// crop photo, clear outside of circle, and measure total area
 setLocation(1, 1, 1366, 768);
 run("Set... ", "zoom=25");
 run("Set Measurements...", "area display redirect=None decimal=2");
 setTool("oval");
 
-// macro will not continue until the selection is made.  you can exit by closing the image window.
+// program will not continue until the selection is made
+// exit by closing the image
 while(selectionType()<0){ 
-	waitForUser("Select area inside the ring","Hold shift while drawing circle, then click 'OK'"); 
+	waitForUser("Select area inside the ring", "Hold shift while drawing circle, then click 'OK'"); 
 }
 
 run("Crop");
@@ -21,7 +27,9 @@ setBackgroundColor(255, 255, 255);
 run("Clear Outside");
 run("Measure");
 
-// generates black and white image.  black pixels represent green pixels
+// Color Thresholding-------------
+// generates black and white image
+// black pixels represent pixels counted as green
 min=newArray(3);
 max=newArray(3);
 filter=newArray(3);
@@ -61,20 +69,20 @@ selectWindow("Result of Result of 0");
 rename(a);
 // Color Thresholding-------------
 
-// counts number of green pixels under total area column in the summary table.  excludes pixel groups of less than 10 pixels
+// counts number of green pixels under total area column in the summary table
+// excludes pixel groups of less than 10 pixels
 run("Analyze Particles...", "size=10-Infinity summarize");
-
         selectWindow(list[k]); 
         close(); 
 
 // saves summary and results tables
 String.copyResults; 
 string = String.paste; 
-File.append(string, "/home/truthling/Documents/ECOSS/ImageJ_Results/"+"area.csv");
+File.append(string, saveResults+"area.csv");
 
 IJ.renameResults("Summary","Results"); 
 String.copyResults; 
 string = String.paste; 
-File.append(string, "/home/truthling/Documents/ECOSS/ImageJ_Results/"+"green.csv");
+File.append(string, saveResults+"green.csv");
 
 }
